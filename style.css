@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroller {
+  animation: 15s scroll alternate infinite;
+}
+
+.scroller:first-child {
+  animation-duration: 15s;
+}
+
+.scroller:nth-child(2) {
+  animation-duration: 15s;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@layer base {
+
+a {
+		@apply text-2xl sm:text-xl md:text-2xl;
+	}
+}
